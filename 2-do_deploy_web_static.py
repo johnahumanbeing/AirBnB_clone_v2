@@ -25,9 +25,9 @@ def do_pack():
     """
 
     local("mkdir -p versions")
-    dformat = "%Y%m%d%H%M%S"
+    date_format = "%Y%m%d%H%M%S"
     archive_path = "versions/web_static_{}.tgz".format(
-            datetime.strftime(datetime.now(), dformat))
+            datetime.strftime(datetime.now(), date_format))
     result = local("tar -cvzf {} web_static".format(archive_path))
     if result.failed:
         return None
