@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module that starts a flask web application
+Module that starts a Flask web application
 """
 
 from flask import Flask
@@ -10,31 +10,27 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def index():
-    """Displays Hello HBNB!"""
+    """Display Hello HBNB!"""
     return 'Hello HBNB!'
 
 
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
-    "Displays HBNB"
+    """Display HBNB"""
     return 'HBNB'
 
 
 @app.route("/c/<text>", strict_slashes=False)
-def dispay_c(text):
-    """
-    Displays C then value of text variable
-    """
+def display_c(text):
+    """Displays the C then value of the text variable"""
     return 'C ' + text.replace('_', ' ')
 
 
 @app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
 def display_python(text='is cool'):
-    """
-    displays 'python', then value of text variable
-    """
-    return 'python ' + text.replace('_', ' ')
+    """displays “Python”, then value of the text variable"""
+    return 'Python ' + text.replace('_', ' ')
 
 
 if __name__ == '__main__':
