@@ -30,7 +30,7 @@ def display_python(text='is cool'):
     """
     displays 'python', then value of text variable
     """
-    return "python" + text.replace('_', ' ')
+    return "python " + text.replace('_', ' ')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
