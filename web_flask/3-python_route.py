@@ -11,13 +11,13 @@ app = Flask(__name__)
 @app.route("/", strict_slashes=False)
 def index():
     """Displays Hello HBNB!"""
-    return "Hello HBNB!"
+    return 'Hello HBNB!'
 
 
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
     "Displays HBNB"
-    return "HBNB"
+    return 'HBNB'
 
 
 @app.route("/c/<text>", strict_slashes=False)
@@ -34,7 +34,7 @@ def display_python(text='is cool'):
     """
     displays 'python', then value of text variable
     """
-    return "python " + text.replace('_', ' ')
+    return 'python ' + text.replace('_', ' ')
 
 
 if __name__ == '__main__':
